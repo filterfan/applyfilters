@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<script type ="text/javascript"  src ="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> 
+
+</script>
+
+<head>
+
+<meta charset ="UTF-8">
+
+<title>Image Processor</title>
+
+
+
+<style>
+
+  canvas {
+
+      width:70%;
+
+      border:1px solid rgb(100,150,255);
+
+    }
+
+#reset {
+
+  background-color: #21E451;
+
+  border: none;
+
+  border-radius: 20px;
+
+  border-size: 0px;
+  
+  font-size: 30px;
+
+}
+
+#finput1 {
+ font-size: 30px;
+}
+
+#clr {
+ font-size: 30px;
+}
+
+#clr2 {
+ font-size: 30px;
+}
+
+#clr3 {
+ font-size: 30px;
+}
+
+#graybut {
+ font-size: 30px;
+}
+
+#redbut {
+ font-size: 30px;
+}
+
+#greenbut {
+ font-size: 30px;
+}
+
+#bluebut {
+ font-size: 30px;
+}
+
+#brunettebut {
+ font-size: 30px;
+}
+
+
+
+    h1{
+
+      font-family: serif;
+
+      font-weight: 900;
+
+      font-size: 60px;
+
+      background-color: #3a50d9;
+
+      color: #E0A9FF;
+
+      text-shadow: -3px 2px 0 #72048A;
+
+      text-align: center;
+
+    }
+
+  
+
+   h2 {
+
+      font-family: serif;
+
+      font-weight: 900;
+
+      font-size: 50px;
+
+      background-color:#246678;
+
+      color: #E0A9FF;
+
+      text-shadow: -2px 2px 0 #72048A;
+
+    }
+
+    body{
+
+      background-color: #FFC1B1 ;
+      font-size: 33px;
+      color: darkblue;
+
+    }
+
+    p {
+  font-size: 20px;
+
+  color: darkblue;
+
+  font-family: serif;
+
+  font-style: italic
+
+    }
+
+  </style>
+
+
+
+
+
+  <script>
+
+       //GLOBAL variables
+
+var img1canvas = document.getElementById("can1");
+
+var fileinput = document.getElementById("finput1");
+
+var foreimage = new SimpleImage(fileinput);
+
+
+
+   //function to upload image 1
+
+
+
+function upload1() {
+
+    fileinput = document.getElementById("finput1");
+
+    foreimage = new SimpleImage(fileinput);
+
+    img1canvas = document.getElementById("can1");
+
+    foreimage.drawTo(img1canvas);
+
+  }
+
+
+
+   // function to make IMAGE 1 gray
+
+
+
+function makegray() {
+
+    for(var pixel of foreimage.values()) {
+
+        var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+
+        pixel.setRed(avg);
+
+        pixel.setGreen(avg);
+
+        pixel.setBlue(avg);
+
+    }
+
+    foreimage.drawTo(img1canvas);
+
+  }
+
+   
+
+    // function to make red
+
+function makered() {
+
+  for (var pixel of foreimage.values()) {
+
+    pixel.setRed(150);
+
+  }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+   //function make green
+
+function makegreen() {
+
+  for(var pixel of foreimage.values()) {
+
+    pixel.setGreen(150);
+
+  }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+   //function to make blue
+
+function makeblue() {
+
+  for(var pixel of foreimage.values()) {
+
+    pixel.setBlue(150);
+
+  }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+ //function to make sepia
+
+function sepia() {
+
+  for(var pixel of foreimage.values()) {
+
+    pixel.setRed(112);
+
+    pixel.setBlue(20);
+
+  }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+   //function to make ocean vision(doocean)
+
+function doocean() { 
+
+    for(var pixel of foreimage.values()) {
+
+      var colorinput= document.getElementById("clr");
+
+    var color = colorinput.value;
+
+    pixel.setRed(color);
+
+    }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+ //function to make pink
+
+function doreddish() { 
+
+    for(var pixel of foreimage.values()) {
+
+      var colorinput= document.getElementById("clr2");
+
+    var color = colorinput.value;
+
+    pixel.setGreen(color);
+
+    }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+ //function to make golden(dream)
+
+function golden() { 
+
+    for(var pixel of foreimage.values()) {
+
+      var colorinput= document.getElementById("clr3");
+
+    var color = colorinput.value;
+
+    pixel.setBlue(color);
+
+    }
+
+  foreimage.drawTo(img1canvas);
+
+}
+
+
+
+
+
+   // function to reset
+
+function reset() {
+
+    fileinput = document.getElementById("finput1");
+
+    foreimage = new SimpleImage(fileinput);
+
+    img1canvas = document.getElementById("can1");
+
+    foreimage.drawTo(img1canvas);
+
+}
+
+
+
+
+
+  </script>
+
+
+
+
+
+  </head>
+
+  
+
+<main>
+
+  <body>
+
+    <h1>Upload and apply filters</h1> <br>
+
+    <h2>Have fun with your images!</h2>
+
+    <p><b>Online Image filter: Click 'Choose Files' button below to select images from your device before you can apply filters.</b></p>
+
+  
+
+<br>
+
+<canvas id="can1">
+
+</canvas>
+
+
+
+<br>
+
+  <input type="file" multiple="false" accept="image/*" id="finput1" onchange="upload1()">
+
+<p>
+
+  <input type="button" value="B&W" onclick="makegray()" id="graybut">
+
+  <input type="button" value="Make Red" onclick="makered()" id="redbut">
+
+  <input type="button" value="Make Green" onclick="makegreen()" id="greenbut">
+
+  <input type="button" value="Make Blue" onclick="makeblue()" id="bluebut">
+
+  <input type="button" value="Brunette" onclick="sepia()" id="brunettebut">
+
+  <div>
+
+  Ocean vision: <input type = "color" value="#00E9FA" id="clr" onchange="doocean()"> &nbsp &nbsp
+
+  Pinkify: <input type = "color" value="#F773B9" id="clr2" onchange="doreddish()"> &nbsp &nbsp
+
+    Dream: <input type = "color" value="#B3B611" id="clr3" onchange="golden()">
+
+    </div
+
+</p>
+
+    <div>
+
+      <br>
+
+  <input type="button" value="Reset" onclick="reset()" id="reset">
+
+    </div>
+
+    
+
+  </body>
+
+</main>
+
+
+
+</html>
+
