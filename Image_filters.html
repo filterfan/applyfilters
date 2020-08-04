@@ -1,415 +1,564 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<script type ="text/javascript"  src ="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> 
-
-</script>
+<script type ="text/javascript"  src ="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> </script>
 
 <head>
+  <title>Your free online image filters - onlineimagefilters.buzz</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Filterfan">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="onlineimagefilters.buzz: Find plenty of image filter tools you like. Filterfan is a free secure online image filters platform for you">
+  <meta property="og:url" content="https://www.onlineimagefilters.buzz/">
+  <meta property="og:title" content="Free Online Image Filters and Effects Editor">
+  <meta property="og:site_name" content="onlineimagefilters.buzz">
+  <meta property="og:image" content="http://onlineimagefilters.buzz/imgs/Chocolate_girl_original.png">
+  <meta property="og:description" content="onlineimagefilters.buzz: Find plenty of image filters you love and apply to your own images and photos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onlineimagefilters.buzz/">
 
-<meta charset ="UTF-8">
+  <script data-ad-client="ca-pub-2162970468360044" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" type="image/png" href="http://onlineimagefilters.buzz/imgs/Chocolate_girl_original.png"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="cookieChoices.adsBlocked()" onload="cookieChoices.adsBlocked(true)"></script>
+  
 
-<title>Image Processor</title>
+<style type="text/css">
 
-
-
-<style>
-
-  canvas {
-
-      width:70%;
-
+canvas {
+      width:50%;
       border:1px solid rgb(100,150,255);
-
+      display: inline-block;
     }
 
-#reset {
-
-  background-color: #21E451;
-
-  border: none;
-
-  border-radius: 20px;
-
-  border-size: 0px;
-  
-  font-size: 30px;
-
+a{
+  color: #3B5EA6;
+  text-decoration: none;
 }
+
+.bannertop{
+  width: 100%;
+  height: 200px;
+  border: solid 1px #000000;
+}
+
+.bannerbottom{
+  width: 100%;
+  height: 400px;
+  border: solid 1px #000000;
+}
+
+.bannerside{
+  width: 30%;
+  float: right;
+  height: auto;
+  border: solid 1px #000000;
+  display: inline-block;
+}
+
+#reset {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+    h1{
+      font-family: serif;
+      font-weight: 900;
+      font-size: 40px;
+      background-color: #3a50d9;
+      color: #E0A9FF;
+      text-shadow: -3px 2px 0 #72048A;
+      text-align: center;
+    }
+  
+   h2 {
+      opacity: 0.8;
+      font-family: serif;
+      font-weight: 900;
+      font-size: 30px;
+      background-color:#246678;
+      color: #E0A9FF;
+      text-shadow: -2px 2px 0 #72048A;
+      
+     
+    }
+    body{
+      background-color: #EDD6FF;
+      color: purple;
+      font-size: 18px;
+    }
+
 
 #finput1 {
- font-size: 30px;
+   font-size: 25px;
 }
-
-#clr {
- font-size: 30px;
-}
-
-#clr2 {
- font-size: 30px;
-}
-
-#clr3 {
- font-size: 30px;
-}
-
 #graybut {
- font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
 }
 
 #redbut {
- font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
 }
 
 #greenbut {
- font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
 }
 
 #bluebut {
- font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
 }
 
 #brunettebut {
- font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#negativebut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#dissectleftbut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#dissectrightbut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#palmabut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#coolbut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#studiobut {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#clr {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#clr2 {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+#clr3 {
+  border: none;
+  border-radius: 20px;
+  border-size: 0px;
+  font-size: 50px;
+}
+
+.butt{
+  display: inline-block;
+  position: relative;
+  width: 80%;
+}
+div{
+  display: inline-block;
+  position: relative;
+  width: 10%;
+}
+.horizontal-scroll-wrapper{
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+.horizontal-scroll-wrapper{
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.horizontal-scroll-wrapper{
+  display:inline-block;
+  text-align: center;
+}
+
+section{
+  padding-top: 15px;
+}
+
+   h3 {
+      font-family: serif;
+      font-weight: 900;
+      color: #5E0887;
+    }
+
+nav{
+  text-align: center;
+}
+
+nav a{
+  font-size: 20px;
+  margin: 2%;
+  display: inline-block;
+  text-align: center;
+  width: 15%;
+  padding: 1%;
+  text-decoration: none;
+  background-color: #3B5EA6;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+nav a:hover{
+  background-color: rgba(200,200,200,.7);
+  color: purple;
+}
+.current{
+  background-color: #A1FF94;
+  color: darkblue;
+}
+header,footer {
+  text-align: center;
+  background: #E231FF;
+  background: -moz-linear-gradient(top, #E05EFF 100%);
+  background: -webkit-linear-gradient(#E05EFF 0%,#7CFAFF 100%);
+  background: -o-linear-gradient(#E05EFF 0%,#7CFAFF 100%);
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+footer{
+  padding-top: 15px;
 }
 
 
-
-    h1{
-
-      font-family: serif;
-
-      font-weight: 900;
-
-      font-size: 60px;
-
-      background-color: #3a50d9;
-
-      color: #E0A9FF;
-
-      text-shadow: -3px 2px 0 #72048A;
-
-      text-align: center;
-
-    }
-
-  
-
-   h2 {
-
-      font-family: serif;
-
-      font-weight: 900;
-
-      font-size: 50px;
-
-      background-color:#246678;
-
-      color: #E0A9FF;
-
-      text-shadow: -2px 2px 0 #72048A;
-
-    }
-
-    body{
-
-      background-color: #FFC1B1 ;
-      font-size: 33px;
-      color: darkblue;
-
-    }
-
-    p {
-  font-size: 20px;
-
-  color: darkblue;
-
-  font-family: serif;
-
-  font-style: italic
-
-    }
 
   </style>
 
-
-
-
-
   <script>
 
-       //GLOBAL variables
-
+   //GLOBAL variables
 var img1canvas = document.getElementById("can1");
-
 var fileinput = document.getElementById("finput1");
-
 var foreimage = new SimpleImage(fileinput);
-
-
+function square(x){return x*x}
 
    //function to upload image 1
 
-
-
 function upload1() {
-
     fileinput = document.getElementById("finput1");
-
     foreimage = new SimpleImage(fileinput);
-
     img1canvas = document.getElementById("can1");
-
     foreimage.drawTo(img1canvas);
-
   }
-
-
 
    // function to make IMAGE 1 gray
 
-
-
 function makegray() {
-
     for(var pixel of foreimage.values()) {
-
         var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
-
         pixel.setRed(avg);
-
         pixel.setGreen(avg);
-
         pixel.setBlue(avg);
-
     }
-
     foreimage.drawTo(img1canvas);
-
   }
-
    
-
     // function to make red
-
 function makered() {
-
   for (var pixel of foreimage.values()) {
-
     pixel.setRed(150);
-
   }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
 
    //function make green
-
 function makegreen() {
-
   for(var pixel of foreimage.values()) {
-
-    pixel.setGreen(150);
-
+    pixel.setGreen(100);
   }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
 
    //function to make blue
-
 function makeblue() {
-
   for(var pixel of foreimage.values()) {
-
     pixel.setBlue(150);
-
   }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
 
  //function to make sepia
-
 function sepia() {
-
   for(var pixel of foreimage.values()) {
-
     pixel.setRed(112);
-
     pixel.setBlue(20);
-
   }
-
   foreimage.drawTo(img1canvas);
-
 }
-
 
 
    //function to make ocean vision(doocean)
-
 function doocean() { 
-
     for(var pixel of foreimage.values()) {
-
-      var colorinput= document.getElementById("clr");
-
-    var color = colorinput.value;
-
-    pixel.setRed(color);
-
+    pixel.setRed(0);    
     }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
 
  //function to make pink
-
 function doreddish() { 
-
     for(var pixel of foreimage.values()) {
-
-      var colorinput= document.getElementById("clr2");
-
-    var color = colorinput.value;
-
-    pixel.setGreen(color);
-
+    pixel.setGreen(115);
     }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
 
  //function to make golden(dream)
-
 function golden() { 
-
     for(var pixel of foreimage.values()) {
-
-      var colorinput= document.getElementById("clr3");
-
-    var color = colorinput.value;
-
-    pixel.setBlue(color);
-
+    pixel.setBlue(17);
     }
-
   foreimage.drawTo(img1canvas);
-
 }
-
-
-
 
 
    // function to reset
-
 function reset() {
-
     fileinput = document.getElementById("finput1");
-
     foreimage = new SimpleImage(fileinput);
-
     img1canvas = document.getElementById("can1");
-
     foreimage.drawTo(img1canvas);
-
 }
 
+// function to invert colors
+function makenegative() {
+   for (var pixel of foreimage.values()) {
+     var curred=pixel.getRed();
+     var curgreen=pixel.getGreen();
+     var curblue=pixel.getBlue();
+     pixel.setRed(255-curred);
+     pixel.setGreen(255-curgreen);
+     pixel.setBlue(255-curblue);
+  }
+  foreimage.drawTo(img1canvas);
+}
 
+// function to dissect right colors
+function dissectright() {
+   for (var pixel of foreimage.values()) {
+     var x = pixel.getX();
+     var y = pixel.getY();
+     var w = foreimage.getWidth();
+     var curred=pixel.getRed();
+     var curgreen=pixel.getGreen();
+     var curblue=pixel.getBlue();
+     if (x > foreimage.getWidth()/2){
+     pixel.setRed(255-curred);
+     pixel.setGreen(255-curgreen);
+     pixel.setBlue(255-curblue);
+     }
+     else{
+       foreimage.setPixel(pixel.getX(), pixel.getY(), pixel)
+     }
+  }
+  foreimage.drawTo(img1canvas);
+}
 
+// function to dissect left colors
+function dissectleft() {
+   for (var pixel of foreimage.values()) {
+     var x = pixel.getX();
+     var y = pixel.getY();
+     var w = foreimage.getWidth();
+     var curred=pixel.getRed();
+     var curgreen=pixel.getGreen();
+     var curblue=pixel.getBlue();
+     if (x < foreimage.getWidth()/2){
+     pixel.setRed(255-curred);
+     pixel.setGreen(255-curgreen);
+     pixel.setBlue(255-curblue);
+     }
+     else{
+       foreimage.setPixel(pixel.getX(), pixel.getY(), pixel)
+     }
+  }
+  foreimage.drawTo(img1canvas);
+}
 
+  //function make green
+function makegreen() {
+  for(var pixel of foreimage.values()) {
+    pixel.setGreen(150);
+  }
+  foreimage.drawTo(img1canvas);
+}
+
+  //function make Palmaish
+function palma() {
+  for(var pixel of foreimage.values()) {
+    pixel.setRed(pixel.getRed()+50);
+    pixel.setGreen(pixel.getGreen()+5);
+    pixel.setBlue(pixel.getBlue()+1);
+  }
+  foreimage.drawTo(img1canvas);
+}
+
+ //function make Cool
+function cool() {
+  for(var pixel of foreimage.values()) {
+    pixel.setRed(pixel.getRed()+1);
+    pixel.setGreen(pixel.getGreen()+5);
+    pixel.setBlue(pixel.getBlue()+50);
+  }
+  foreimage.drawTo(img1canvas);
+}
+
+ //function make Colourful
+function studio() {
+   for (var pixel of foreimage.values()) {
+       pixel.setBlue(pixel.getBlue()+255);
+       pixel.setGreen(pixel.getGreen()+5)
+       pixel.setRed(pixel.getRed()+5)
+     }
+  foreimage.drawTo(img1canvas);
+}
 
   </script>
+</head>
 
+<header>
+      <nav>
+         <a href="http://onlineimagefilters.buzz" class="current">Home</a>
+         <a href="serviceslink">Services</a>
+         <a href="howitworkslink">How it works</a>
+         <a href="https://www.facebook.com/samwel.momanyi.923" target="_blank">Contact Us</a>
+    </nav>
+</header>
 
+<body>
+<h1>Upload and apply filters</h1> <br>
+<h2>Have fun with your images!</h2>
 
+<div class="bannertop">
+  <!-- AdSense banner -->
+      <div class="adsbygoogle" style="display:inline-block;" data-ad-client="ca-pub-2162970468360044"></div>
+  <!-- /AdSense banner --></div>
 
-
-  </head>
-
+<p>Online Image filter: Click 'Choose Files' button below to select images from your device before you can apply filters.</p>
   
-
-<main>
-
-  <body>
-
-    <h1>Upload and apply filters</h1> <br>
-
-    <h2>Have fun with your images!</h2>
-
-    <p><b>Online Image filter: Click 'Choose Files' button below to select images from your device before you can apply filters.</b></p>
-
-  
-
 <br>
-
 <canvas id="can1">
-
 </canvas>
+<div>
+<input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_original.png" value="Reset" onclick="reset()" class="butt" id="reset"> <figcaption> <b>Original</b> </figcaption>
+</div>
 
-
+<div class="bannerside">
+  <!-- AdSense banner -->
+      <div class="adsbygoogle" style="display:inline-block;" data-ad-client="ca-pub-2162970468360044"></div>
+  <!-- /AdSense banner --></div>
 
 <br>
+  <input type="file" multiple="false" accept="image/*" id="finput1" onchange="upload1()" controlsList="download"><br>
 
-  <input type="file" multiple="false" accept="image/*" id="finput1" onchange="upload1()">
+<section>
+  <div class="horizontal-scroll-wrapper">
 
-<p>
-
-  <input type="button" value="B&W" onclick="makegray()" id="graybut">
-
-  <input type="button" value="Make Red" onclick="makered()" id="redbut">
-
-  <input type="button" value="Make Green" onclick="makegreen()" id="greenbut">
-
-  <input type="button" value="Make Blue" onclick="makeblue()" id="bluebut">
-
-  <input type="button" value="Brunette" onclick="sepia()" id="brunettebut">
-
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_gray.png" value="Grayscale" onclick="makegray()" class="butt" id="graybut"> <figcaption> <b>Grayscale</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_red.png" value="Make Red" onclick="makered()" class="butt" id="redbut"> <figcaption> <b>Make Red</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_green.png" value="Make Green" onclick="makegreen()" class="butt" id="greenbut"> <figcaption> <b>Green Dark</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_blue.png" value="Make Blue" onclick="makeblue()" class="butt" id="bluebut"> <figcaption> <b>Blue</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_brunette.png" value="Brunette" onclick="sepia()" class="butt" id="brunettebut"> <figcaption> <b>Brunette</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_negative.png" value="Negative" onclick="makenegative()" class="butt" id="negativebut"> <figcaption> <b>Negative</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_leftdissect.png" value="Dissect Left" onclick="dissectleft()" class="butt" id="dissectleftbut"> <figcaption> <b>Dissect Left</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_rightdissect.png" value="Dissect Right" onclick="dissectright()" class="butt" id="dissectrightbut"> <figcaption> <b>Dissect Right</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_palma.png" value="Palma" onclick="palma()" class="butt" id="palmabut"> <figcaption> <b>Palma</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_cool.png" value="Cool" onclick="cool()" class="butt" id="coolbut"> <figcaption> <b>Cool</b> </figcaption>
+</div>
+<div>
+  <input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_studio.png" value="Studio" onclick="studio()" class="butt" id="studiobut"> <figcaption> <b>Studio</b> </figcaption>
+</div>  
   <div>
+<input type = "image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_ocean.png" value="Ocean Vision" class="butt" id="clr" onclick="doocean()"> <figcaption> <b>Ocean Vision</b> </figcaption>
+</div>
+<div>
+<input type = "image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_pinkify.png" value="Pinkify" class="butt" id="clr2" onclick="doreddish()"> <figcaption> <b>Pinkify</b> </figcaption>
+</div>
+<div>
+<input type="image" img src="http://onlineimagefilters.buzz/imgs/Chocolate_girl_dream.png" value="Dream" class="butt" id="clr3" onclick="golden()"> <figcaption> <b>Dream</b> </figcaption>
+</div>
+</div>
+  </section>
 
-  Ocean vision: <input type = "color" value="#00E9FA" id="clr" onchange="doocean()"> &nbsp &nbsp
+  <div class="bannerbottom">
+  <!-- AdSense banner -->
+      <div class="adsbygoogle" style="display:inline-block;" data-ad-client="ca-pub-2162970468360044"> </div>
+  <!-- /AdSense banner --></div>
 
-  Pinkify: <input type = "color" value="#F773B9" id="clr2" onchange="doreddish()"> &nbsp &nbsp
+<footer>
+<a href ="#"><b>Back to top</b></a> &nbsp &nbsp &nbsp
+<a href ="http://onlineimagefilters.buzz"><b>Home</b></a> &nbsp &nbsp &nbsp
+<a href ="https://www.facebook.com/samwel.momanyi.923" target="_blank" ><b>Contact us</b></a> &nbsp &nbsp &nbsp
+<a href ="http://onlineimagefilters.buzz/Privacy policy/privacypolicy.html"><b>Privacy policy</b></a> &nbsp &nbsp &nbsp
 
-    Dream: <input type = "color" value="#B3B611" id="clr3" onchange="golden()">
-
-    </div
-
+<br>
+<div id="copyright">
+<p>
+&copy <a href ="http://onlineimagefilters.buzz"><b>Filterfan</b></a>
 </p>
-
-    <div>
-
-      <br>
-
-  <input type="button" value="Reset" onclick="reset()" id="reset">
-
-    </div>
-
-    
-
-  </body>
-
-</main>
-
-
-
+</div>
+</footer>
+</body>
 </html>
-
